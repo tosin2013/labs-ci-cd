@@ -4,7 +4,6 @@ ansible_connection: local
 jenkins_name: jenkins
 sonarqube_name: sonarqube
 hoverfly_name: hoverfly
-nexus_password: "admin123"
 
 jenkins_persistence_type: "persistent"
 
@@ -85,7 +84,7 @@ nexus:
   secret:
     SECRET_NAME: "nexus-password"
     USERNAME: admin
-    PASSWORD: "{{ nexus_password }}"
+    #PASSWORD: "{{ nexus_password }}"
   deploy:
     VOLUME_CAPACITY: 10Gi
     MEMORY_LIMIT: 2Gi
