@@ -89,7 +89,7 @@ nexus:
   deploy:
     VOLUME_CAPACITY: 10Gi
     MEMORY_LIMIT: 2Gi
-    CONTAINER_IMAGE: sonatype/nexus3:3.15.2
+    CONTAINER_IMAGE: sonatype/nexus3:3.26.1
 
 sonarqube:
   build:
