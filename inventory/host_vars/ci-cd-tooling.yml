@@ -172,16 +172,16 @@ openshift_cluster_content:
 # Secrets stored in OCP land and sync'd to Jenkins for consumption
 - object: ci-cd-secrets
   content:
-  - name: nexus-secret
-    template: "{{ openshift_templates_raw }}/{{ openshift_templates_raw_version_tag }}/secrets/secret-user-pass-plaintext.yml"
-    params_from_vars: "{{ nexus.secret }}"
-    namespace: "{{ ci_cd_namespace }}"
-    tags:
-    - jenkins
-    - secret
-    - ci-cd-secrets
+  #- name: nexus-secret
+  #  template: "{{ openshift_templates_raw }}/{{ openshift_templates_raw_version_tag }}/secrets/secret-user-pass-basic-auth.yml"
+  #  params_from_vars: "{{ nexus.secret }}"
+  #  namespace: "{{ ci_cd_namespace }}"
+  #  tags:
+  #  - jenkins
+  #  - secret
+  #  - ci-cd-secrets
   - name: jenkins-secret
-    template: "{{ openshift_templates_raw }}/{{ openshift_templates_raw_version_tag }}/secrets/secret-user-pass-plaintext.yml"
+    template: "{{ openshift_templates_raw }}/{{ openshift_templates_raw_version_tag }}/secrets/secret-user-pass-basic-auth.yml"
     params_from_vars: "{{ jenkins.build }}"
     namespace: "{{ ci_cd_namespace }}"
     tags:
