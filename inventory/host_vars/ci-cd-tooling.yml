@@ -19,7 +19,7 @@ jenkins:
     SOURCE_REPOSITORY_SECRET: "jenkins-git-password"
   deploy:
     NAMESPACE: "{{ ci_cd_namespace }}"
-    JENKINS_IMAGE_STREAM_TAG: "{{ jenkins_name }}:latest"
+    JENKINS_IMAGE_STREAM_TAG: "{{ jenkins_name }}:2"
     MEMORY_LIMIT: 6Gi
     JENKINS_OPTS: "--sessionTimeout=720"
     VOLUME_CAPACITY: 20Gi
