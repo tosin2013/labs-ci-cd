@@ -19,10 +19,10 @@ jenkins:
     SOURCE_REPOSITORY_SECRET: "jenkins-git-password"
   deploy:
     NAMESPACE: "{{ ci_cd_namespace }}"
-    JENKINS_IMAGE_STREAM_TAG: "{{ jenkins_name }}:2"
+    JENKINS_IMAGE_STREAM_TAG: "{{ jenkins_name }}:latest"
     MEMORY_LIMIT: 6Gi
     JENKINS_OPTS: "--sessionTimeout=720"
-    VOLUME_CAPACITY: 20Gi
+    VOLUME_CAPACITY: 10Gi
     MEMORY_REQUEST: 2Gi
     JVM_ARCH: x86_64
     GITLAB_HOST: "gitlab.mydomain.example.com"
